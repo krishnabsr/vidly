@@ -1,0 +1,6 @@
+{
+    "name": "Job seeker app -- development",
+    "mail" : {
+        "host" : "dev-mail-server"
+    }
+}
