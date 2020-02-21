@@ -15,20 +15,18 @@ const Company = mongoose.model(
   })
 );
 
-
 function validateGenre(company) {
-    const schema = {
-      name: Joi.string()
-        .min(3)
-        .max(50)
-        .required(),
-      location: Joi.string()
-          .min(3)
-          .max(50)
-          .required()
-    };
-    return Joi.validate(company, schema);
-  }
-
+  const schema = {
+    name: Joi.string()
+      .min(3)
+      .max(50)
+      .required(),
+    location: Joi.string()
+      .min(3)
+      .max(50)
+      .required()
+  };
+  return Joi.validate(company, schema);
+}
 
 module.exports = Company;

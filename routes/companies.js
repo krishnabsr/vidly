@@ -55,18 +55,5 @@ router.get("/:id", async (req, res) => {
   res.send(company);
 });
 
-function validateGenre(company) {
-  const schema = {
-    name: Joi.string()
-      .min(3)
-      .max(50)
-      .required(),
-    location: Joi.string()
-        .min(3)
-        .max(50)
-        .required()
-  };
-  return Joi.validate(company, schema);
-}
 
 module.exports = router;
